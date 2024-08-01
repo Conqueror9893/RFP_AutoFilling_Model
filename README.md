@@ -12,6 +12,7 @@ Pre-requisites:
 -> Python 
 -> Node
 -> Rfp training files(Included in the package)
+-> [Google's pretrained vector model](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing)
 
 Install the following to start the model:
 
