@@ -1,0 +1,116 @@
+.combined-component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+.combined-component {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.combined-component h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.combined-component h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.combined-component form {
+  margin-bottom: 20px;
+}
+
+.combined-component form div {
+  margin-bottom: 10px;
+}
+
+.combined-component label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.combined-component input[type="file"],
+.combined-component input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.combined-component button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.combined-component button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.combined-component button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.combined-component .answer {
+  background: #e9f5e9;
+  border-left: 5px solid #4caf50;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.combined-component .answer strong {
+  color: #4caf50;
+}
+
+.combined-component .similarity-score {
+  background: #f0f8ff;
+  border-left: 5px solid #4682b4;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.combined-component .similarity-score strong {
+  color: #4682b4;
+}
+
+.combined-component a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.combined-component a:hover {
+  text-decoration: underline;
+}
