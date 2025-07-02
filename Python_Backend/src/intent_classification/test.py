@@ -2,7 +2,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from ..utils.config import MODEL_SAVE_DIR, LABEL_TO_INTENT
-
+LABEL_TO_INTENT = {int(k): v for k, v in LABEL_TO_INTENT.items()}
 def test_model(query):
     # Load tokenizer and model
     tokenizer = AutoTokenizer.from_pretrained(MODEL_SAVE_DIR)
@@ -22,7 +22,7 @@ def test_model(query):
         predicted_class = torch.argmax(logits, dim=1).item()
 
     # Map numeric class ID to the corresponding label
-    predicted_label = LABEL_TO_INTENT.get(predicted_class, "Unknown Label")
+    predicted_label = LABEL_TO_INTENT.get(int(predicted_class), "Unknown Label")
 
     return predicted_label
 
