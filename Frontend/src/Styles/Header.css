@@ -1,0 +1,115 @@
+.headerfo {
+  width: 99.7%;
+  max-width: 100%;
+  background-color: #fff;
+  padding-top: 16px;
+}
+
+.header-containerfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.back-buttonfo {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.logo-iconfo {
+  margin-bottom: 15px;
+}
+
+.company-logofo {
+  height: 51.97px;
+  width: 107px;
+  margin-left: 10px;
+}
+
+.user-profilefo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.user-iconfo {
+  height: 40px;
+  width: 40px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;
+}
+
+.logout-buttonfo {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-iconfo {
+  height: 25px;
+  width: 25px;
+}
+
+.header-dividerfo {
+  border: 1px solid #E0E0E0;
+  width: 100%;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .header-containerfo {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      text-align: center;
+  }
+
+  .company-logofo {
+      width: 100px;
+      height: auto;
+  }
+
+  .user-profilefo {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .user-name {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-iconfo {
+      height: 30px;
+      width: 30px;
+  }
+
+  .company-logofo {
+      width: 90px;
+  }
+
+  .user-profilefo {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .user-name {
+      font-size: 10px;
+  }
+
+  .logout-iconfo {
+      height: 20px;
+      width: 20px;
+  }
+}

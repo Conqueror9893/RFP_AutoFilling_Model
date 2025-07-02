@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "dc6d3bf2-a0e6-4e3f-bc90-9abb2c318ae7",
+		"name": "RFP_Cruncher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34657308"
+	},
+	"item": [
+		{
+			"name": "Fetch_Similar_Questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"What is the feature of this product?\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.10.128:8000/similar_questions",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"similar_questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate_Response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"What is the feature of this product?\",\r\n  \"label\": \"Technical Retail Both Architecture\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.10.128:8000/generate",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health_Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.10.128:8000/health",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Train_Model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.10.128:8000/train",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test_Model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.10.128:8000/train",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enrich_Response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": \"What is the feature of this product?\",\r\n  \"label\": \"Technical Retail Both Architecture\",\r\n  \"response_to_enrich\": \" It is Appzillon product.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.10.128:8000/enrich",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"10",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"enrich"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save_Answer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

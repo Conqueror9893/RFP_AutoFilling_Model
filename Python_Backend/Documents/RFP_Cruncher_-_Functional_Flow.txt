@@ -1,0 +1,164 @@
+User Interaction:
+
+Frontend File: src/streamlit_ui/main.py
+Handles query submission, label selection, and response display.
+Provides file upload interface for batch processing.
+
+Query Classification:
+
+API Endpoint: /test in src/api/main.py
+Classification Model:
+Training: src/intent_classification/train.py
+Testing: src/intent_classification/test.py
+
+Response Generation:
+
+API Endpoint: /generate in src/api/main.py
+Response Logic: src/llm/response_generator.py
+Similarity matching: lookup_and_match_query()
+Response generation: run_ollama_model()
+Enrichment prompt: generate_response()
+Database: src/local_folder/RFP_Collated_Database.xlsx
+
+Response Enrichment:
+
+API Endpoint: /enrich in src/api/main.py
+Enrichment Logic: src/llm/response_generator.py
+Uses run_ollama_model().
+
+Similar Questions Search:
+
+API Endpoint: /similar_questions in src/api/main.py
+Similarity Matching Logic: lookup_and_match_query() in src/llm/response_generator.py
+
+Batch Processing:
+
+Frontend File: src/streamlit_ui/main.py
+Handles file uploads and downloads.
+API Endpoint: /generate in src/api/main.py
+File Management
+
+File Upload Path: src/local_folder/pdf_files
+PDF Processing: src/chroma_integration/pdf_processor.py
+Text extraction: extract_text_from_pdf()
+Chunking: split_text()
+Embedding Generation: src/chroma_integration/embedding_manager.py
+Uses sentence-transformers/all-MiniLM-L6-v2.
+Database Storage: src/chroma_integration/embedding_manager.py (ChromaDB).
+Backend System
+
+Framework: FastAPI (src/api/main.py)
+Endpoints:
+/health: Health check.
+/test: Intent classification.
+/generate: Response generation.
+/enrich: Response enrichment.
+/similar_questions: Similarity matching.
+
+Frontend System:
+
+Framework: Streamlit (src/streamlit_ui/main.py)
+Features:
+Tooltips, modals, and copy-to-clipboard functionality.
+
+Utilities:
+
+Excel Loader: src/utils/config.py
+Function: load_answers_from_excel()
+
+Model Management:
+
+Classification Model: distilbert-base-uncased in src/intent_classification/
+Embedding Model: sentence-transformers/all-MiniLM-L6-v2 in src/chroma_integration/embedding_manager.py
+LLM Model: Ollama (src/llm/response_generator.py)
+
+
+
+
+Step-by-step flow of project files:
+
+Frontend Interaction (Streamlit)
+
+File: src/streamlit_ui/main.py
+User submits a query or uploads a file.
+User selects or confirms a category (label).
+
+API Call for Query Classification:
+
+File: src/api/main.py
+Endpoint: /test
+Action: Sends the query to the classification logic.
+
+Query Classification:
+
+File: src/intent_classification/test.py
+Uses a pre-trained classification model (distilbert-base-uncased).
+
+Label Assignment:
+
+File: src/api/main.py
+Receives the predicted category from the classification logic and sends it back to the frontend for confirmation.
+
+API Call for Response Generation:
+
+File: src/api/main.py
+Endpoint: /generate
+Action: Passes the query and label to the response generator.
+
+Response Generation:
+
+File: src/llm/response_generator.py
+Step 1: Checks for a pre-existing answer in src/local_folder/RFP_Collated_Database.xlsx using lookup_and_match_query().
+Step 2: If no match, retrieves relevant context from ChromaDB using src/chroma_integration/pdf_processor.py and embedding_manager.py.
+Step 3: Generates a response using the retrieved context via run_ollama_model().
+
+API Call for Similar Questions:
+
+File: src/api/main.py
+Endpoint: /similar_questions
+Action: Fetches similar questions and answers from src/local_folder/RFP_Collated_Database.xlsx using lookup_and_match_query().
+
+Frontend Displays Response:
+
+File: src/streamlit_ui/main.py
+Displays the generated response and optionally provides similar questions with similarity scores.
+
+Optional: Response Enrichment
+
+File: src/api/main.py
+Endpoint: /enrich
+Action: Sends the query, label, and initial response to run_ollama_model() in src/llm/response_generator.py for refinement.
+Batch Processing (File Uploads)
+
+Frontend File: src/streamlit_ui/main.py
+User uploads an Excel file with queries.
+API File: src/api/main.py
+Endpoint: /generate
+Logic: Generates responses for all queries in the uploaded file using the same sequential process.
+PDF Processing
+
+File: src/chroma_integration/pdf_processor.py
+Extracts and splits text into chunks from uploaded PDFs.
+Embedding Generation:
+File: src/chroma_integration/embedding_manager.py
+Generates embeddings using sentence-transformers/all-MiniLM-L6-v2.
+Stores document embeddings in ChromaDB.
+Health Check
+
+File: src/api/main.py
+Endpoint: /health
+Checks the status of the application, including ChromaDB, LLM, and classification models.
+
+
+
+Call Chain Summary
+
+Frontend (streamlit_ui/main.py)
+Calls /test → /generate → /similar_questions → /enrich.
+API (api/main.py)
+Invokes classification (intent_classification/test.py).
+Generates responses (llm/response_generator.py).
+Fetches context (chroma_integration/embedding_manager.py).
+Database Operations
+Reads existing answers (local_folder/RFP_Collated_Database.xlsx).
+Retrieves embeddings from ChromaDB.

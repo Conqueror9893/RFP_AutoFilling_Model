@@ -1,0 +1,274 @@
+
+.container2 {
+  max-width: 859px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Group */
+.form-groupre {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+/* Query Section */
+.query-label-res,
+.generated-label-res,
+.modify-response-res {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.query-container-res,
+.generated-container-res,
+.response-container-res {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.query-textarea-res{
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0px solid #F7F7F7;
+  border-radius: 12px;
+  resize: vertical;
+  font-weight: 400;
+  background-color: #F7F7F7;
+  text-align: justify;
+  padding-right: 50px;
+}
+
+.response-textarea-res {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  resize: vertical;
+  padding-right: 50px;
+  text-align: justify;
+}
+.textarea-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.copy-icon {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.copy-icon:hover {
+  opacity: 1;
+}
+
+.copied-message {
+  position: absolute;
+  right: 10px;
+  top: 15%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: green;
+  font-weight: bold;
+  opacity: 0.8;
+}
+/* Selected Category */
+.selected-category-res {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.selected-text-res {
+  font-size: 14px;
+  color: #555;
+  border: 1px solid #E0E0E0;
+  min-height: 20px;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: 0%;
+  max-width: 859px;
+  border-radius: 12px;
+}
+
+/* Button Group */
+.button-groupre {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.send-review-btn-res{
+  background-color: #263238;
+  color: white;
+  padding: 16px 24px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.regenerate-btn-res {
+  background-color: #F5F5F5;
+  color: black;
+  padding: 16px 24px;
+  border: 1px solid #26323866;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.send-review-btn-res:hover,
+.regenerate-btn-res:hover {
+  background-color: black;
+}
+
+/* Similar Queries Section */
+.similar-title-res {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.similar-queries-grid-res {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  color: #555;
+}
+
+.similar-query-card-res {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.similar-query-card-res:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
+}
+
+/* Copy Response Button */
+.copy-response-btn {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #0000FF;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+  padding-left: 0%;
+}
+
+.ant-btn-icon{
+  display: none;
+}
+
+.copy-response-btn:hover {
+  color: #0056b3;
+}
+
+/* Loading & Error */
+.loading-spin-res {
+  display: block;
+  margin: 10px auto;
+}
+
+.error-alert-res {
+  margin-top: 10px;
+}
+
+/* View More Button */
+.view-more-res {
+  display: block;
+  margin: 10px auto;
+  background-color: black;
+  color: white;
+  padding: 1px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-more-res:hover {
+  background-color: black;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns text at the top */
+  width: 100%;
+  padding: 0px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  text-align: justify;
+  gap: 10px;
+  height: fit-content;
+}
+
+/* Query & Response Section */
+.query-response-section {
+  flex: 0.7; /* Takes up 70% */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Similarity Score Section */
+.similarity-score-section {
+  flex: 0.3; /* Takes up 30% */
+  text-align: right; /* Aligns text to the right */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container2 {
+      padding: 15px;
+  }
+
+  .query-container-res,
+  .generated-container-res,
+  .response-container-res {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .query-textarea-res,
+  .response-textarea-res {
+      min-height: 60px;
+      font-size: 13px;
+  }
+
+  .button-groupre {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .send-review-btn-res,
+  .regenerate-btn-res {
+      width: 100%;
+      text-align: center;
+  }
+
+  .similar-queries-grid-res {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  }
+}

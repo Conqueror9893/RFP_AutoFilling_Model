@@ -1,0 +1,213 @@
+/* .container-se {
+    display: flex;
+    border: 1px solid gray;
+    height: 45px;
+    width: 650px;
+    align-items: center;
+    position: relative;
+    right: 5px;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+.inner-container-se {
+    position: relative;
+    width: 90%;
+    left: 10px;
+}
+.textarea-se {
+    width: 90%;
+    height: 20px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+    overflow-y: auto;
+}
+.file-input-se {
+    display: none;
+}
+.upload-btn-se {
+    border: none;
+    width: 280px;
+    background-color: white;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.upload-btn-se img {
+    height: 17px;
+    width: 20px;
+}
+.generate-btn-se {
+    border-radius: 45%;
+    border: none;
+    height: 35px;
+    width: 40px;
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+}
+
+.generate-btn-se img {
+    border-radius: 45%;
+    height: 35px;
+    width: 40px;
+} */
+
+
+/* Centering the container on the screen */
+.container-se {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 100vh; Full screen height */
+    width: 100vw;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  /* Inner container for better structure */
+  .inner-container-se {
+    width: 100%;
+    max-width: 500px; /* Limit width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Textarea for input */
+  .textarea-se {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  /* File input styling */
+  .file-input-se {
+    display: none;
+  }
+  
+  /* File upload button */
+  .upload-btn-se {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .upload-btn-se img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .upload-btn-se:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Generate button */
+  .generate-btn-se {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .generate-btn-se img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+  }
+  
+  .generate-btn-se img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .inner-container-se {
+      max-width: 90%;
+    }
+  
+    .textarea-se {
+      font-size: 14px;
+    }
+  
+    .upload-btn-se {
+      width: 180px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .textarea-se {
+      min-height: 80px;
+      font-size: 13px;
+    }
+  
+    .upload-btn-se {
+      width: 160px;
+      font-size: 12px;
+    }
+  
+    .generate-btn-se img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .get-category-btn-se {
+    width: 200px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+  }
+  
+  .get-category-btn-se:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .get-category-btn-se:active {
+    transform: scale(0.95);
+  }
+  

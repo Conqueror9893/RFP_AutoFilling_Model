@@ -1,0 +1,226 @@
+{
+  "categories": [
+    {
+      "title": "Functional Authentication & Security",
+      "description": [
+        "If your question is about security, choose the category Functional Authentication & Security.",
+        "You could ask questions like:",
+        "- \"What are the security protocols for user authentication?\"",
+        "- \"What multi-factor authentication methods are supported in the platform?\"",
+        "- \"Are biometric login options like fingerprint or face recognition supported?\""
+      ]
+    }
+    ,
+    {
+      
+        "title": "Functional Dashboard",
+        "description": [
+          "If your question is about Dashboard, choose the category 'Functional Retail Both Dashboard'.",
+          "You could ask questions like:",
+          "- \"Can widgets on the dashboard be personalized for each user?\"",
+          "- \"Is there support for drag-and-drop customization of dashboard elements?\"",
+          "- \"Can admin users control or configure what appears on a user’s dashboard?\""
+        ]
+      
+      
+    },
+    {
+      "title": "Functional Accounts",
+      "description": [
+        "If your question is about Accounts, choose the category 'Functional Accounts'.",
+        "You could ask questions like:",
+        "- \"How does the system categorize accounts (e.g., current, deposit, loan accounts)?\"",
+        "- \"Can users easily view and manage all account types in one interface?\"",
+        "- \"What information is provided about each account (e.g., balance, transaction history)?\""
+      ]
+    },
+    {
+      "title": "Functional Transfers",
+      "description": [
+        "If your question is about Transfers, choose the category 'Functional Transfers'.",
+        "You could ask questions like:",
+        "- \"Are there alerts or notifications sent for completed transfers?\"",
+	"- \"Are approval workflows available for corporate transfers?\"",
+        "- \"What kind of validations are in place to prevent transfer errors?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Service Requests",
+      "description": [
+        "If your question is about Service Requests, choose the category 'Functional Service Requests'.",
+        "You could ask questions like:",
+	"- \"Can users raise a service request directly from the app?\"",
+	"- \"Is there a service request history or log available for users?\"",
+        "- \"How is the administration of user messages handled?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Cards",
+      "description": [
+        "If your question is about Cards, choose the category 'Functional Cards'.",
+        "For example, you could ask questions like:",
+        "- \"Does the solution allow users to view the PIN code for their debit and credit cards?\"",
+        "- \"Can users change their debit or credit card PIN code in the solution?\"",
+        "- \"Does the solution support users requesting a new debit card in case it is lost?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Bill Payments",
+      "description": [
+        "If your question is about Bill Payments, choose the category 'Functional Bill Payments'.",
+        "For example, you could ask questions like:",
+        "- \"User is able to use credit/debit card for Google Pay payments.\"",
+        "- \"User is able to set debit/credit card in mobile app as a payment method.\"",
+    	"- \"Can users view payment history for past bill payments?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Finance",
+      "description": [
+        "If your question is about Finance, choose the category 'Functional Finance'.",
+        "For example, you could ask questions like:",
+    	"- \"Is there a risk assessment questionnaire for financial profiling?\"",
+    	"- \"Does the platform offer personalized financial planning tools?\"",
+    	"- \"Are budgeting features like spending limits or alerts supported?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Family Banking",
+      "description": [
+        "If your question is about Family Banking, choose the category 'Functional Family Banking'.",
+        "For example, you could ask questions like:",
+    	"- \"Is there an approval workflow for child-initiated transactions?\"",
+    	"- \"Are sub-accounts available for children and teens with parental control?\"",
+    	"- \"Are savings goals or reward programs available for children’s accounts?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Loans",
+      "description": [
+        "If your question is about Loans, choose the category 'Functional Loans'.",
+        "For example, you could ask questions like:",
+    	"- \"Can users view and manage their active loans from the dashboard?\"",
+        "- \"Does the solution allow users to view details of their existing finances?\"",
+    	"- \"Can customers calculate eligibility or estimate EMIs through the app?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Settings",
+      "description": [
+        "If your question is about Settings, choose the category 'Functional Settings'.",
+        "For example, you could ask questions like:",
+    	"- \"Can users configure notification preferences for different services?\"",
+    	"- \"Can users view and update their profile details like email, phone number, and address?\"",
+    	"- \"Is there an option to enable or disable certain features/modules per user preference?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Administration",
+      "description": [
+        "If your question is about Administration, choose the category 'Functional Administration'.",
+        "For example, you could ask questions like:",
+    	"- \"Can admins assign or revoke roles dynamically from the admin panel?\"",
+    	"- \"Is there an option to block, activate, disable, or unlock a user and log a reason for the action?\"",
+    	"- \"Is audit logging enabled for all administrative actions?\""
+      ]
+    }
+    ,
+    {
+      "title": "Functional Onboarding",
+      "description": [
+        "If your question is about Onboarding, choose the category 'Functional Onboarding'.",
+        "For example, you could ask questions like:",
+    	"- \"Are upgrades backwards compatible with the previous version?\"",
+    	"- \"Does the solution follow mobile OS vendor guidelines and OWASP security best practices?\"",
+    	"- \"Can onboarding flow be customized based on the user type (individual/business)?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical General",
+      "description": [
+        "If your question is about General, choose the category 'Technical General'.",
+        "For example, you could ask questions like:",
+    	"- \"What are the general technical requirements for our system (RAM, OS, CPU, etc.)?\"",
+        "- \"How do I assess system performance?\"",	
+        "- \"What technologies or frameworks are used in the backend and frontend?\""
+
+      ]
+    }
+    ,
+    {
+      "title": "Technical UI/UX",
+      "description": [
+        "If your question is about UI/UX, choose the category 'Technical UI/UX'.",
+        "For example, you could ask questions like:",
+    	"- \"Is there an option for a dark mode or theme customization?\"",
+        "- \"Creating a menu to add different or favorite links to be accessed easily\"",
+    	"- \"Can users customize dashboard widgets and layouts?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical Architecture",
+      "description": [
+        "If your question is about Architecture, choose the category 'Technical Architecture'.",
+        "For example, you could ask questions like:",
+    	"- \"How does the architecture accommodate scaling — both vertical and horizontal?\"",
+    	"- \"Is there support for high availability and disaster recovery?\"",
+    	"- \"Can you share a high-level view of the application architecture (e.g., microservices, monolith, etc.)?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical Integration",
+      "description": [
+        "If your question is about Integration, choose the category 'Technical Integration'.",
+        "For example, you could ask questions like:",
+        "- \"Does the interface involve Event-based interaction?\"",
+        "- \"Does the system need to transform data structure?\"",
+    	"- \"How is integration authentication managed (OAuth2, API keys, etc.)?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical Cloud Readiness",
+      "description": [
+        "If your question is about Cloud, choose the category 'Technical Cloud Readiness'.",
+        "For example, you could ask questions like:",
+    	"- \"Does the platform support deployment on public, private, and hybrid cloud environments?\"",
+        "- \"Does the solution support data encryption, communication encryption, and compliance with EU privacy regulations (e.g., GDPR)?\"",
+        "- \"Can the bank access data via APIs in the proposed solution?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical Performance",
+      "description": [
+        "If your question is about Performance, choose the category 'Technical Performance'.",
+        "For example, you could ask questions like:",
+    	"- \"Are benchmark reports available for the version proposed to the Bank?\"",
+    	"- \"Have Non-Functional Tests (NFT) like load testing, stress testing, and endurance testing been performed in existing implementations?\"",
+        "- \"What's the availability scale of your solution?\""
+      ]
+    }
+    ,
+    {
+      "title": "Technical Security",
+      "description": [
+        "If your question is about Security, choose the category 'Technical Security'.",
+        "For example, you could ask questions like:",
+    	"- \"Does the system support role-based access control (RBAC)?\"",
+    	"- \"Is multi-factor authentication (MFA) implemented for both users and admins?\"",
+	"- \"Are regular security assessments and penetration tests conducted?\""
+      ]
+    }
+  ]
+    
+}

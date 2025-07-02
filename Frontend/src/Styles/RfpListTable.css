@@ -1,0 +1,101 @@
+
+
+
+.table-header-rfpse {
+    background-color: lightgray;
+  }
+  .button-container-rfpse {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+  }
+  
+  .add-user-icon-rfpse {
+    height: 25px;
+    width: 25px;
+  }
+ 
+  .download-icon-rfpse {
+    height: 25px;
+    width: 25px;
+  }
+  .rfp-list-container-rfpse {
+    padding: 0px 20px;
+  }
+  
+  .rfp-list-title-rfpse {
+    height: 40px;
+    width: 200px;
+    position: relative;
+    right: 50px;
+    font-family: 'Outfit', sans-serif;
+  }
+  .search-input-rfpse {
+    width: 248px;
+    height: 40px;
+    position: relative;
+    max-width: 400px;
+    margin-left: 580px;
+    flex: 1;
+    background: #FAFAFA;
+  }
+
+  .search-upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 10px;
+  }
+  
+  .upload-button {
+    background-color: #263238;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: black;
+  }
+
+  .user-select-rfpse {
+    width: 100%;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-left: 17%;
+    margin-top: 5%;
+}
+.rfp-table-rfpse{
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

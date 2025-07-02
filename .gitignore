@@ -1,0 +1,16 @@
+# Ignore Node.js dependencies
+**/node_modules/
+
+# Ignore Python virtual environment
+Python_Backend/rfp_env/
+
+# Ignore JetBrains IDE settings (e.g., PyCharm, WebStorm)
+.idea/
+
+#Ignore documents uploaded
+
+Python_Backend/local_folder
+
+#Ignore the .env file
+
+**/.env

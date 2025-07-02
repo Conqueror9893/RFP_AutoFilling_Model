@@ -1,0 +1,110 @@
+RFP Cruncher - Process Flow
+
+1. User Interaction:
+    - Users interact with the system through a web-based UI built using Streamlit.
+    - The main functionalities include:
+        - Query submission for category prediction and response generation.
+        - Enrichment of existing responses.
+        - Batch processing of queries through file uploads.
+        - Viewing similar questions and answers.
+
+2. Query Classification:
+    - The user inputs a query via the frontend.
+    - The query is sent to the `/test` API endpoint.
+    - Backend Process:
+        - The intent classification model (`distilbert-base-uncased`) predicts a label for the query.
+        - If available, keyword-based matching provides an additional classification layer.
+    - The predicted label is returned to the frontend for user confirmation or modification.
+
+3. Response Generation:
+    - Once the label is confirmed or updated, the query and label are sent to the `/generate` API.
+    - Backend Process:
+        - The system searches for similar questions in the existing database using cosine similarity.
+        - If a match is found, the corresponding answer is enriched using the Ollama model.
+        - If no match is found:
+            - Context is retrieved from ChromaDB using the query embeddings.
+            - A response is generated based on the query and the retrieved context.
+    - The response is sent back to the frontend and displayed to the user.
+
+4. Response Enrichment:
+    - Users can refine an existing response by submitting it with the associated query and label to the `/enrich` API.
+    - Backend Process:
+        - Constructs an enrichment prompt using the query, label, and initial response.
+        - Calls the Ollama model to generate a more professional and comprehensive response.
+    - The enriched response is returned to the frontend for user review.
+
+5. Similar Questions Search:
+    - Users can view similar questions and their similarity percentages by calling the `/similar_questions` API.
+    - Backend Process:
+        - The query is matched against the QA database using cosine similarity.
+        - The top matches, along with their similarity scores, are returned to the frontend.
+
+6. Batch Processing:
+    - Users can upload an Excel file containing multiple queries.
+    - Backend Process:
+        - The file is processed row by row, and responses are generated for each query using the `/generate` API.
+        - The generated responses are added to the file with their corresponding labels.
+    - The updated file is made available for download.
+
+7. File Management:
+    - PDFs containing relevant documents are uploaded and stored locally.
+    - Content from PDFs is extracted, chunked, and converted into embeddings using the `sentence-transformers/all-MiniLM-L6-v2` model.
+    - These embeddings are stored in ChromaDB for semantic search.
+
+8. Backend System:
+    - Built using FastAPI to handle API endpoints.
+    - Handles request validation, routing, and interaction with models and databases.
+    - Key APIs:
+        - `/health`: Monitors the system's operational status.
+        - `/test`: Predicts the label for a given query.
+        - `/generate`: Generates responses based on query and label.
+        - `/enrich`: Refines and enriches existing responses.
+        - `/similar_questions`: Retrieves similar questions with similarity scores.
+
+9. Frontend System:
+    - Provides an intuitive interface for query submission and response handling.
+    - Key features:
+        - Dropdown for label selection and modification.
+        - Tooltip guidance for buttons and actions.
+        - Modal windows for file uploads and response previews.
+        - Copy-to-clipboard functionality for generated responses.
+
+10. Logging and Debugging:
+    - Logs all actions, including API calls, errors, and query-processing steps.
+    - Debugging information such as similarity scores and retrieved contexts are printed for developers.
+
+11. Final Output:
+    - Users receive:
+        - Generated responses for individual or batch queries.
+        - Enriched responses for further professional refinement.
+        - Similar questions with answers for reference.
+
+
+
+Simplified version:
+
+For single query: 
+
+Step 1: User inputs a query.
+Step 2: Query is matched against existing queries in the excel. (cosine similarity and fuzzywuzzy)
+Step 3: If match is found, the most similar query is chosen, and the existing answer is enriched. (Ollama model)
+Step 4: If no match is found, the query is labelled. (Distilbert Model)
+Step 5: Based on the label, the system message is chosen, and the prompt is created. 
+Step 6: For the given prompt, the context is derived from the documents.(ChromaDB)
+Step 7: The generated context is run through the LLM model.(Ollama model).
+Step 8 : Response is generated.
+
+For Excel upload:
+
+Step 1: User uploads an excel.
+Step 2: Model checks if queries are present. If yes, then the queries are labelled. User can select a default label for all the queries. (Distilbert Model)
+Step 3: Based on the label, the system message is chosen, and the prompt is created. 
+Step 4: For the given prompt, the context is derived from the documents.(ChromaDB)
+Step 5: The generated context is run through the LLM model.(Ollama model).
+Step 6 : Response is generated.
+
+For response enrichment:
+
+Step 1: User inputs the query (optional), selects the label, and the response.
+Step 2: System message is selected based on the label and prompt is selected.
+Step 3: Response is generated using the LLM model. (Ollama model).
