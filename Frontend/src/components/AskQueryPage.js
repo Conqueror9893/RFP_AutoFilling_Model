@@ -114,7 +114,7 @@ const AskQueryPage = () => {
       if (!response.ok) throw new Error("Failed to fetch category");
 
       const data = await response.json();
-      const newPredictedCategory = data.category || "None";
+      const newPredictedCategory = data.predicted_class || "None";
       setPredictedCategory(newPredictedCategory);
       setSelectedCate(newPredictedCategory);
 
